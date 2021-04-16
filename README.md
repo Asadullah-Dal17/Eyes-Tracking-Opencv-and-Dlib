@@ -48,7 +48,7 @@ Steps are involved to run the code.
 
 image show the face landmarks available in, dilb face landmark detector pre-trained network.
 
-<img src="/images/landmarks.jpg" alt="Landmarks Image">
+<img src="images/landmarks.jpg" alt="Landmark Image">
 
 ---
 
