@@ -5,6 +5,7 @@ import math
 
 # variables
 fonts = cv.FONT_HERSHEY_COMPLEX
+
 # colors
 YELLOW = (0, 247, 255)
 CYAN = (255, 255, 0)
@@ -28,7 +29,6 @@ LIGHT_RED = (2, 53, 255)
 # face detector object
 
 # landmarks detector
-
 
 # function
 
@@ -54,8 +54,7 @@ def faceDetector():
     pass
 
 
-def facePoint():
-    pass
+def faceLandmarkDetector():
 
 
 def blinkDetector():
