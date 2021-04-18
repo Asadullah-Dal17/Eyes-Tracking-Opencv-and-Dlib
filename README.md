@@ -42,7 +42,7 @@ Steps are involved to run the code.
 
      `pip3 install dlib`
 
-     for more detais [see](https://www.pyimagesearch.com/2018/01/22/install-dlib-easy-complete-guide/)
+     for more details [see](https://www.pyimagesearch.com/2018/01/22/install-dlib-easy-complete-guide/)
 
 2. Install opencv-python
    `pip install opencv-python`
