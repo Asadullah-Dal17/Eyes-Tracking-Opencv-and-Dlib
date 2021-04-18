@@ -65,6 +65,7 @@ if You found this Helpful, please star :star: it.
 
 I also have youtube Channel where i teach computer vision and AI if you are want join me: <a href="https://www.youtube.com/c/aiphile"> <img alt="AiPhile Youtube" src="icons/youtub-icon.svg"  width="25" height="25">
 </a> that would be help as well. thank you. :smile:
+
 if you have any Query feel free to ask me on my Social Media.
 
 ## :green_heart: Join Me on Social Media :green_heart:
