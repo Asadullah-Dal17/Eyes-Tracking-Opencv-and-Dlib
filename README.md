@@ -4,12 +4,12 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 
 ## TODO
 
-- [ ] Eyes landmark Detection :eyes:
-- [ ] Blink Detector and Counter
-- [ ] Extracting Eyes using Masking Techniques
-- [ ] Threshold Eyes
-- [ ] Dividing Eye into Three Parts **Right Center Left**
-- [ ] Counting Black in Each part and Estimating The Position of Eye
+- [x] Eyes landmark Detection :eyes:
+- [x] Blink Detector and Counter
+- [x] Extracting Eyes using Masking Techniques
+- [x] Threshold Eyes
+- [x] Dividing Eye into Three Parts **Right Center Left**
+- [x] Counting Black in Each part and Estimating The Position of Eye
 
 ## Installation
 
@@ -22,18 +22,26 @@ Steps are involved to run the code.
    #### For Windows
 
    - Inorder to install dilb on windows machines you need following: :smirk:
+
      - Visual Studio
      - Visual Studio Build Tools
      - Cmake
+
        for More Detail check out this Blog post. [here](https://medium.com/analytics-vidhya/how-to-install-dlib-library-for-python-in-windows-10-57348ba1117f)
 
+   `pip install cmake `
    `pip install dlib`
 
    #### Linux or Mac OS
 
    - Just you need Cmake that all here on linux and Mac OS
    - install Dilb uisng Pip command
+
+     `pip3 install cmake`
+
      `pip3 install dlib`
+
+     for more detais [see](https://www.pyimagesearch.com/2018/01/22/install-dlib-easy-complete-guide/)
 
 2. Install opencv-python
    `pip install opencv-python`
