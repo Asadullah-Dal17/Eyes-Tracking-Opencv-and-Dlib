@@ -104,3 +104,73 @@ def blinkDetector(eyePoints):
 
     blinkRatio = (HorizontalDistance/VerticalDistance)
     return blinkRatio, topMid, bottomMid
+
+# Eyes Tracking function.
+
+
+def EyeTracking(image, gray, eyePoints):
+    # getting dimensions of image
+    dim = gray.shape
+    # creating mask .
+    mask = np.zeros(dim, dtype=np.uint8)
+
+    # converting eyePoints into Numpy arrays.
+    PollyPoints = np.array(eyePoints, dtype=np.int32)
+    # Filling the Eyes portion with WHITE color.
+    cv.fillPoly(mask, [PollyPoints], 255)
+
+    # Writing gray image where color is White  in the mask using Bitwise and operator.
+    eyeImage = cv.bitwise_and(gray, gray, mask=mask)
+
+    # getting the max and min points of eye inorder to crop the eyes from Eye image .
+
+    maxX = (max(eyePoints, key=lambda item: item[0]))[0]
+    minX = (min(eyePoints, key=lambda item: item[0]))[0]
+    maxY = (max(eyePoints, key=lambda item: item[1]))[1]
+    minY = (min(eyePoints, key=lambda item: item[1]))[1]
+
+    # other then eye area will black, making it white
+    eyeImage[mask == 0] = 255
+
+    # cropping the eye form eyeImage.
+    cropedEye = eyeImage[minY:maxY, minX:maxX]
+
+    # getting width and height of cropedEye
+    height, width = cropedEye.shape
+
+    divPart = int(width/3)
+
+    #  applying the threshold to the eye .
+    ret, thresholdEye = cv.threshold(cropedEye, 100, 255, cv.THRESH_BINARY)
+
+    # dividing the eye into Three parts .
+    rightPart = thresholdEye[0:height, 0:divPart]
+    centerPart = thresholdEye[0:height, divPart:divPart+divPart]
+    leftPart = thresholdEye[0:height, divPart+divPart:width]
+
+    # counting Black pixel in each part using numpy.
+    rightBlackPx = np.sum(rightPart == 0)
+    centerBlackPx = np.sum(centerPart == 0)
+    leftBlackPx = np.sum(leftPart == 0)
+
+    return mask, thresholdEye, eyeImage
+
+
+def Position(ValuesList):
+
+    maxIndex = ValuesList.index(max(ValuesList))
+    posEye = ''
+    color = [WHITE, BLACK]
+    if maxIndex == 0:
+        posEye = "Right"
+        color = [YELLOW, BLACK]
+    elif maxIndex == 1:
+        posEye = "Center"
+        color = [BLACK, MAGENTA]
+    elif maxIndex == 2:
+        posEye = "Left"
+        color = [LIGHT_CYAN, BLACK]
+    else:
+        posEye = "Eye Closed"
+        color = [BLACK, WHITE]
+    return posEye, color

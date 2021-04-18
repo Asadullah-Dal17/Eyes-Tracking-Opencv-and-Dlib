@@ -47,6 +47,10 @@ while True:
 
     # for p in LeftEyePoint:
     #     cv.circle(image, p, 3, m.MAGENTA, 1)
+    mask, thrshEye, EyeImage = m.EyeTracking(frame, grayFrame, RightEyePoint)
+    cv.imshow("mask", mask)
+    cv.imshow('threshold', thrshEye)
+    cv.imshow('EyeImage', EyeImage)
 
     # showing the frame on the screen
     cv.imshow('Frame', image)
