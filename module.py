@@ -87,3 +87,20 @@ def faceLandmakDetector(image, gray, face, Draw=True):
             # draw circle on each landmark
             cv.circle(image, point, 3, ORANGE, 1)
     return image, pointList
+
+# Blink detector function.
+
+
+def blinkDetector(eyePoints):
+    top = eyePoints[1:3]
+    bottom = eyePoints[4:6]
+    # finding the mid point of above points
+    topMid = midpoint(top[0], top[1])
+    bottomMid = midpoint(bottom[0], bottom[1])
+    # getting the actual width and height eyes using eucaldainDistance function
+    VerticalDistance = eucaldainDistance(topMid, bottomMid)
+    HorizontalDistance = eucaldainDistance(eyePoints[0], eyePoints[3])
+    # print()
+
+    blinkRatio = (HorizontalDistance/VerticalDistance)
+    return blinkRatio, topMid, bottomMid
