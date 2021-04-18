@@ -30,6 +30,7 @@ Steps are involved to run the code.
        for More Detail check out this Blog post. [here](https://medium.com/analytics-vidhya/how-to-install-dlib-library-for-python-in-windows-10-57348ba1117f)
 
    `pip install cmake `
+
    `pip install dlib`
 
    #### Linux or Mac OS
