@@ -152,8 +152,10 @@ def EyeTracking(image, gray, eyePoints):
     rightBlackPx = np.sum(rightPart == 0)
     centerBlackPx = np.sum(centerPart == 0)
     leftBlackPx = np.sum(leftPart == 0)
+    pos, color = Position([rightBlackPx, centerBlackPx, leftBlackPx])
+    # print(pos)
 
-    return mask, thresholdEye, eyeImage
+    return mask, pos, color
 
 
 def Position(ValuesList):
