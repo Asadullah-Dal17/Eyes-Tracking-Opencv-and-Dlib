@@ -1,12 +1,17 @@
 import cv2 as cv
 import numpy as np
 import module as m
+import time
 
 # Variables
 COUNTER = 0
 TOTAL_BLINKS = 0
 CLOSED_EYES_FRAME = 3
 cameraID = 0
+# variables for frame rate.
+FRAME_COUNTER = 0
+START_TIME = time.time()
+FPS = 0
 
 # creating camera object
 camera = cv.VideoCapture(cameraID)
@@ -15,8 +20,10 @@ fourcc = cv.VideoWriter_fourcc(*'XVID')
 Recoder = cv.VideoWriter('output.mp4', fourcc, 15.0, (640, 480))
 
 while True:
+    FRAME_COUNTER += 1
     # getting frame from camera
     ret, frame = camera.read()
+    cv.putText(frame, f'FPS: {FPS}', (450, 20), m.fonts, 0.6, m.BLACK, 2)
 
     # converting frame into Gry image.
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -69,8 +76,13 @@ while True:
         cv.imshow('Frame', frame)
 
     Recoder.write(frame)
-
+    # calculating the seconds
+    SECONDS = time.time() - START_TIME
+    # calculating the frame rate
+    FPS = FRAME_COUNTER/SECONDS
+    print(FPS)
     # defining the key to Quite the Loop
+
     key = cv.waitKey(1)
 
     # if q is pressed on keyboard: quit
@@ -78,5 +90,6 @@ while True:
         break
 # closing the camera
 camera.release()
+Recoder.release()
 # closing  all the windows
 cv.destroyAllWindows()
