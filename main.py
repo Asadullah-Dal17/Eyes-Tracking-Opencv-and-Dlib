@@ -23,8 +23,6 @@ while True:
     FRAME_COUNTER += 1
     # getting frame from camera
     ret, frame = camera.read()
-    cv.putText(frame, f'FPS: {round(FPS,1)}',
-               (460, 20), m.fonts, 0.7, m.YELLOW, 2)
 
     # converting frame into Gry image.
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -36,7 +34,8 @@ while True:
         # calling landmarks detector funciton.
         image, PointList = m.faceLandmakDetector(frame, grayFrame, face, False)
         # print(PointList)
-
+        cv.putText(frame, f'FPS: {round(FPS,1)}',
+                   (460, 20), m.fonts, 0.7, m.YELLOW, 2)
         RightEyePoint = PointList[36:42]
         LeftEyePoint = PointList[42:48]
         leftRatio, topMid, bottomMid = m.blinkDetector(LeftEyePoint)
