@@ -23,7 +23,8 @@ while True:
     FRAME_COUNTER += 1
     # getting frame from camera
     ret, frame = camera.read()
-    cv.putText(frame, f'FPS: {FPS}', (450, 20), m.fonts, 0.6, m.BLACK, 2)
+    cv.putText(frame, f'FPS: {round(FPS,1)}',
+               (460, 20), m.fonts, 0.7, m.YELLOW, 2)
 
     # converting frame into Gry image.
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -80,7 +81,7 @@ while True:
     SECONDS = time.time() - START_TIME
     # calculating the frame rate
     FPS = FRAME_COUNTER/SECONDS
-    print(FPS)
+    # print(FPS)
     # defining the key to Quite the Loop
 
     key = cv.waitKey(1)
