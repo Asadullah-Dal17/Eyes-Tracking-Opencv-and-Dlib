@@ -7,6 +7,7 @@ __pycache__/
 output.mp4
 # C extensions
 *.so
+*.avi
 *.mp4
 Video/
 # Distribution / packaging
