@@ -8,21 +8,37 @@ COUNTER = 0
 TOTAL_BLINKS = 0
 CLOSED_EYES_FRAME = 3
 cameraID = 0
+videoPath = "Video/Your Eyes Independently_Trim5.mp4"
 # variables for frame rate.
 FRAME_COUNTER = 0
 START_TIME = time.time()
 FPS = 0
 
+
 # creating camera object
-camera = cv.VideoCapture(cameraID)
+camera = cv.VideoCapture(videoPath)
+camera.set(3, 640)
+camera.set(4, 480)
+
 # Define the codec and create VideoWriter object
 fourcc = cv.VideoWriter_fourcc(*'XVID')
-Recoder = cv.VideoWriter('output.mp4', fourcc, 15.0, (640, 480))
+f = camera.get(cv.CAP_PROP_FPS)
+width = camera.get(cv.CAP_PROP_FRAME_WIDTH)
+height = camera.get(cv.CAP_PROP_FRAME_HEIGHT)
+print(width, height, f)
+fileName = videoPath.split('/')[1]
+name = fileName.split('.')[0]
+print(name)
+
+
+Recoder = cv.VideoWriter(f'{name}.avi', fourcc, f, (int(width), int(height)))
 
 while True:
     FRAME_COUNTER += 1
     # getting frame from camera
     ret, frame = camera.read()
+    if ret == False:
+        break
 
     # converting frame into Gry image.
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -63,12 +79,22 @@ while True:
         # for p in LeftEyePoint:
         #     cv.circle(image, p, 3, m.MAGENTA, 1)
         mask, pos, color = m.EyeTracking(frame, grayFrame, RightEyePoint)
+        maskleft, leftPos, leftColor = m.EyeTracking(
+            frame, grayFrame, LeftEyePoint)
 
         # draw background as line where we put text.
         cv.line(image, (30, 90), (100, 90), color[0], 30)
+        cv.line(image, (25, 50), (135, 50), m.WHITE, 30)
+        cv.line(image, (405, 50), (495, 50), m.WHITE, 30)
+        cv.line(image, (410, 90), (480, 90), leftColor[0], 30)
 
         # writing text on above line
         cv.putText(image, f'{pos}', (35, 95), m.fonts, 0.6, color[1], 2)
+        cv.putText(image, f'{leftPos}', (415, 95),
+                   m.fonts, 0.6, leftColor[1], 2)
+        cv.putText(image, f'Right Eye', (35, 55), m.fonts, 0.6, color[1], 2)
+        cv.putText(image, f'Left Eye', (415, 55),
+                   m.fonts, 0.6, leftColor[1], 2)
 
         # showing the frame on the screen
         cv.imshow('Frame', image)

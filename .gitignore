@@ -7,7 +7,8 @@ __pycache__/
 output.mp4
 # C extensions
 *.so
-
+*.mp4
+Video/
 # Distribution / packaging
 .Python
 build/
