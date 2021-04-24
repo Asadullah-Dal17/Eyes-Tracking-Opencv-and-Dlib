@@ -31,7 +31,7 @@ name = fileName.split('.')[0]
 print(name)
 
 
-Recoder = cv.VideoWriter(f'{name}.avi', fourcc, 15, (int(width), int(height)))
+Recoder = cv.VideoWriter(f'{name}.mp4', fourcc, 15, (int(width), int(height)))
 
 while True:
     FRAME_COUNTER += 1
