@@ -31,7 +31,7 @@ name = fileName.split('.')[0]
 print(name)
 
 
-Recoder = cv.VideoWriter(f'{name}.mp4', fourcc, 15, (int(width), int(height)))
+# Recoder = cv.VideoWriter(f'{name}.mp4', fourcc, 15, (int(width), int(height)))
 
 while True:
     FRAME_COUNTER += 1
@@ -75,8 +75,8 @@ while True:
             if COUNTER > CLOSED_EYES_FRAME:
                 TOTAL_BLINKS += 1
                 COUNTER = 0
-        cv.putText(image, f'Total Blinks: {TOTAL_BLINKS}', (430, 60),
-                   m.fonts, 0.7, m.ORANGE, 2)
+        cv.putText(image, f'Total Blinks: {TOTAL_BLINKS}', (230, 17),
+                   m.fonts, 0.5, m.ORANGE, 2)
 
         # for p in LeftEyePoint:
         #     cv.circle(image, p, 3, m.MAGENTA, 1)
@@ -104,7 +104,7 @@ while True:
     else:
         cv.imshow('Frame', frame)
 
-    Recoder.write(frame)
+    # Recoder.write(frame)
     # calculating the seconds
     SECONDS = time.time() - START_TIME
     # calculating the frame rate
@@ -119,6 +119,6 @@ while True:
         break
 # closing the camera
 camera.release()
-Recoder.release()
+# Recoder.release()
 # closing  all the windows
 cv.destroyAllWindows()
