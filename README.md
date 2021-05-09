@@ -10,6 +10,7 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 - [x] Threshold Eyes
 - [x] Dividing Eye into Three Parts **Right Center Left**
 - [x] Counting Black in Each part and Estimating The Position of Eye
+- [ ] Controlling RGB LED's Color With Eyes
 
 ## Installation
 
