@@ -165,13 +165,13 @@ def Position(ValuesList):
     color = [WHITE, BLACK]
     if maxIndex == 0:
         posEye = "Right"
-        color = [YELLOW, BLACK]
+        color = [BLUE, ORANGE]
     elif maxIndex == 1:
         posEye = "Center"
-        color = [BLACK, MAGENTA]
+        color = [GREEN, BLACK]
     elif maxIndex == 2:
         posEye = "Left"
-        color = [LIGHT_CYAN, BLACK]
+        color = [RED, YELLOW]
     else:
         posEye = "Eye Closed"
         color = [BLACK, WHITE]
