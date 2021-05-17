@@ -1,43 +1,20 @@
-
 import cv2 as cv
 import numpy as np
-from numpy import core
 import module as m
 import time
-import serial
-
 
 # Variables
 COUNTER = 0
 TOTAL_BLINKS = 0
 CLOSED_EYES_FRAME = 3
 cameraID = 0
-videoPath = "../sourceVideo.mp4"
-# variables for frame rate.
 FRAME_COUNTER = 0
 START_TIME = time.time()
 FPS = 0
 
 
 # creating camera object
-camera = cv.VideoCapture(videoPath)
-# camera.set(3, 640)
-# camera.set(4, 480)
-
-# Define the codec and create VideoWriter object
-fourcc = cv.VideoWriter_fourcc(*'XVID')
-f = camera.get(cv.CAP_PROP_FPS)
-width = camera.get(cv.CAP_PROP_FRAME_WIDTH)
-height = camera.get(cv.CAP_PROP_FRAME_HEIGHT)
-print(width, height, f)
-fileName = videoPath.split('/')[1]
-name = fileName.split('.')[0]
-print(name)
-
-# create object for serial communication
-# it requires to arguments on com port and baudrate,specified in the Arduino sketch.
-arduino = serial.Serial(port='COM3', baudrate=9600)
-# Recoder = cv.VideoWriter(f'{name}.mp4', fourcc, 15, (int(width), int(height)))
+camera = cv.VideoCapture(2)
 
 while True:
     FRAME_COUNTER += 1
@@ -45,15 +22,11 @@ while True:
     # getting frame from camera
     ret, frame = camera.read()
     if ret == False:
+
         break
-    ledRGB = 'R0G0B0'
-    height, width, _ = frame.shape
-    scalingFactor = 50
-    dim = (int(width*(scalingFactor/100)), int(height * (scalingFactor/100)))
-
-    frame = cv.resize(frame, dim, interpolation=cv.INTER_AREA)
-
+    ledColor = 'R0G0B0'
     # converting frame into Gry image.
+
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     height, width = grayFrame.shape
     circleCenter = (int(width/2), 50)
@@ -96,8 +69,6 @@ while True:
         mask, pos, color = m.EyeTracking(frame, grayFrame, RightEyePoint)
         maskleft, leftPos, leftColor = m.EyeTracking(
             frame, grayFrame, LeftEyePoint)
-        print(len(color))
-        ledRGB = f'R{color[0][2]}G{color[0][1]}B{color[0][0]}'  # "R0G0B0"
 
         # draw background as line where we put text.
         cv.line(image, (30, 90), (100, 90), color[0], 30)
@@ -118,11 +89,10 @@ while True:
         cv.imshow('Frame', image)
     else:
         cv.imshow('Frame', frame)
-    arduino.write(ledRGB.encode())
-    arduino.flush()
 
     # Recoder.write(frame)
     # calculating the seconds
+
     SECONDS = time.time() - START_TIME
     # calculating the frame rate
     FPS = FRAME_COUNTER/SECONDS
