@@ -2,6 +2,7 @@ import cv2 as cv
 import numpy as np
 import module as m
 import time
+import serial
 
 # Variables
 COUNTER = 0
@@ -12,7 +13,7 @@ FRAME_COUNTER = 0
 START_TIME = time.time()
 FPS = 0
 
-
+arduino = serial.Serial(port='COM3', baudrate=9600)
 # creating camera object
 camera = cv.VideoCapture(2)
 
@@ -24,8 +25,8 @@ while True:
     if ret == False:
 
         break
-    ledColor = 'R0G0B0'
     # converting frame into Gry image.
+    ledColor = 'R0G0B0'
 
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     height, width = grayFrame.shape
@@ -69,6 +70,11 @@ while True:
         mask, pos, color = m.EyeTracking(frame, grayFrame, RightEyePoint)
         maskleft, leftPos, leftColor = m.EyeTracking(
             frame, grayFrame, LeftEyePoint)
+        B, G, R = color[0]
+        ledColor = f'R{R}G{G}B{B}'
+        arduino.write(ledColor.encode())
+        time.sleep(0.019)
+        arduino.flush()
 
         # draw background as line where we put text.
         cv.line(image, (30, 90), (100, 90), color[0], 30)
@@ -103,7 +109,12 @@ while True:
 
     # if q is pressed on keyboard: quit
     if key == ord('q'):
+        ledColor = f'R0G0B0'
+        arduino.write(ledColor.encode())
+        time.sleep(0.019)
+        arduino.flush()
         break
+
 # closing the camera
 camera.release()
 # Recoder.release()

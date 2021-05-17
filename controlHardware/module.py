@@ -2,6 +2,7 @@ import cv2 as cv
 import numpy as np
 import dlib
 import math
+import serial
 
 # variables
 fonts = cv.FONT_HERSHEY_COMPLEX
