@@ -4,6 +4,7 @@ import module as m
 import time
 import serial
 
+
 # Variables
 COUNTER = 0
 TOTAL_BLINKS = 0
@@ -13,9 +14,12 @@ FRAME_COUNTER = 0
 START_TIME = time.time()
 FPS = 0
 
+
 arduino = serial.Serial(port='COM3', baudrate=9600)
+
+
 # creating camera object
-camera = cv.VideoCapture(2)
+camera = cv.VideoCapture(0)
 
 while True:
     FRAME_COUNTER += 1
@@ -27,7 +31,6 @@ while True:
         break
     # converting frame into Gry image.
     ledColor = 'R0G0B0'
-
     grayFrame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     height, width = grayFrame.shape
     circleCenter = (int(width/2), 50)
@@ -70,6 +73,7 @@ while True:
         mask, pos, color = m.EyeTracking(frame, grayFrame, RightEyePoint)
         maskleft, leftPos, leftColor = m.EyeTracking(
             frame, grayFrame, LeftEyePoint)
+        # print(pos, leftPos)
         B, G, R = color[0]
         ledColor = f'R{R}G{G}B{B}'
         arduino.write(ledColor.encode())
