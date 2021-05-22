@@ -14,9 +14,17 @@ FRAME_COUNTER = 0
 START_TIME = time.time()
 FPS = 0
 
-
-arduino = serial.Serial(port='COM3', baudrate=9600)
-
+runIs = True
+print('Connecting to Arduino........')
+try:
+    arduino = serial.Serial(port='COM3', baudrate=9600)
+except:
+    print(' Failed to Connected with Arduino! \n--------------------------------- \n Connect Arduino with correct port\n--------------------------------- \n Windows: COM port\n--------------------------------- \n Linux or Mac dev/tty or " Google it for Mac Or Linux"')
+    print("---------------------------------\n Exiting ....")
+    runIs = False
+else:
+    # print(runIs)
+    print("successfully connected to The Arduino, ")
 
 # creating camera object
 camera = cv.VideoCapture(0)
@@ -26,7 +34,7 @@ while True:
 
     # getting frame from camera
     ret, frame = camera.read()
-    if ret == False:
+    if ret == False or runIs == False:
 
         break
     # converting frame into Gry image.
