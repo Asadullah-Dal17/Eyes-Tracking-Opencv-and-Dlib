@@ -142,7 +142,7 @@ def EyeTracking(image, gray, eyePoints):
     divPart = int(width/3)
 
     #  applying the threshold to the eye .
-    ret, thresholdEye = cv.threshold(cropedEye, 100, 255, cv.THRESH_BINARY)
+    ret, thresholdEye = cv.threshold(cropedEye, 125, 255, cv.THRESH_BINARY)
 
     # dividing the eye into Three parts .
     rightPart = thresholdEye[0:height, 0:divPart]
