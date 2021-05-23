@@ -6,7 +6,11 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 
 <img alt="AiPhile Youtube" src="/Control_hardware.gif" >
 
-[**Video Tutorial:**](https://youtu.be/3YDlCRS1pes)
+## Youtube Tutorials
+
+[**Eyes Tracking Tutorial**](https://youtu.be/obKG1SXp76Y)
+
+[**Control Things with Eyes Tutorial**](https://youtu.be/3YDlCRS1pes)
 
 ## TODO
 
