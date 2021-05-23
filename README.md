@@ -2,6 +2,12 @@
 
 Estimate the position of eyes in the frame using computer Vision Techniques.
 
+### Control LED's color with Eyes
+
+<img alt="AiPhile Youtube" src="/Control_hardware.gif" >
+
+[**Video Tutorial:**](https://youtu.be/3YDlCRS1pes)
+
 ## TODO
 
 - [x] Eyes landmark Detection :eyes:
@@ -10,7 +16,7 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 - [x] Threshold Eyes
 - [x] Dividing Eye into Three Parts **Right Center Left**
 - [x] Counting Black in Each part and Estimating The Position of Eye
-- [ ] Controlling RGB LED's Color With Eyes
+- [x] Controlling RGB LED's Color With Eyes
 
 ## Installation
 
