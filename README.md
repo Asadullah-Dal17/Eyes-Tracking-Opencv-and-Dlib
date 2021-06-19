@@ -4,8 +4,7 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 
 ## Control LED's color with Eyes Demo Video 
 
-https://user-images.githubusercontent.com/66181793/122632691-fd464700-d0ed-11eb-812e-489ed64a186c.mp4
-
+https://user-images.githubusercontent.com/66181793/122632983-77c39680-d0ef-11eb-8b60-ff82642cb67e.mp4
 
 
 ## Youtube Tutorials
