@@ -6,8 +6,15 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 
 https://user-images.githubusercontent.com/66181793/122632983-77c39680-d0ef-11eb-8b60-ff82642cb67e.mp4
 
+## Eyes Tracking with Mediapipe
+1. Mediapipe way more faster, has more landmarks, it can reach up to 30 fps as well. while dilb reach about 10fps.
 
-## Youtube Tutorials
+2. Mediapipe is easy to install, just with pip command 
+
+3. mediapipe does not require extra things, visual studio, cmake, etc on windows machine, 
+
+Here you can find [Project Repository](https://github.com/Asadullah-Dal17/Eyes-Position-Estimator-Mediapipe)
+## Youtube Tutorials 
 
 [**Eyes Tracking Tutorial**](https://youtu.be/obKG1SXp76Y)
 
