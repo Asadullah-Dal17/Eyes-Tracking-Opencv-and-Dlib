@@ -82,19 +82,13 @@ image show the face landmarks available in, dilb face landmark detector pre-trai
 
 if You found this Helpful, please star :star: it.
 
-I also have youtube Channel where i teach computer vision and AI if you want join me: <a href="https://www.youtube.com/c/aiphile"> <img alt="AiPhile Youtube" src="icons/youtub-icon.svg"  width="25" height="25">
-</a> that would be help as well. thank you. :smile:
+You can Watch my Video Tutorial on Computer Vision Topics, just check out my YouTube Channel <a href="https://www.youtube.com/c/aiphile">  <img alt="AiPhile Youtube" src="https://user-images.githubusercontent.com/66181793/131223988-882d53a0-4882-468f-9bd7-46b46466baae.png"  width="20"> </a>
 
-if you have any Query feel free to ask me on my Social Media.
 
-## :green_heart: Join Me on Social Media :green_heart:
+If You have any Question or need help in CV Project, Feel free to DM on Instagram  <a href="https://www.instagram.com/aiphile17/">  <img alt="Instagram" src="https://user-images.githubusercontent.com/66181793/131223931-32d84c10-88b4-4cd6-8eb8-89f06c3b5b51.png"  width="20"> </a>
 
-<a href="https://www.youtube.com/c/aiphile"> <img alt="AiPhile Youtube" src="icons/youtub-icon.svg"  width="60" height="60">
-</a>
-<a href="https://www.facebook.com/AIPhile17">
-<img alt="AiPhile Facebook" src="icons/facebook-icon.svg"  width="60" height="60">
-</a>
-<a href="https://www.instagram.com/aiphile17/"> <img alt="AiPhile Insta" src="icons/instagram-icon.svg"  width="60" height="60">
-</a>
-<a href="https://github.com/Asadullah-Dal17"> <img alt="Github" src="icons/github-icon.svg"  width="60" height="60">
-</a>
+## 💚Join me on Social Media :green_heart 🖤 
+
+<h4><a href="https://www.youtube.com/c/aiphile"> YouTube <img alt="AiPhile Youtube" src="https://user-images.githubusercontent.com/66181793/131223988-882d53a0-4882-468f-9bd7-46b46466baae.png"  width="35"> </a> 
+ <a href="https://github.com/Asadullah-Dal17">  GitHub  <img alt="GitHub" src="https://user-images.githubusercontent.com/66181793/131223930-9fd2bfc7-9c43-465d-a057-55f3292f3b2b.png"  width="35"> </a> 
+  <a href="https://www.instagram.com/aiphile17/">   Instagram <img alt="Instagram" src="https://user-images.githubusercontent.com/66181793/131223931-32d84c10-88b4-4cd6-8eb8-89f06c3b5b51.png"  width="35"> </a> </h4>
