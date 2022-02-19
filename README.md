@@ -6,6 +6,9 @@ Estimate the position of eyes in the frame using computer Vision Techniques.
 
 https://user-images.githubusercontent.com/66181793/122632983-77c39680-d0ef-11eb-8b60-ff82642cb67e.mp4
 
+## Iris Tracking Medipipe Opencv python   [Video Tutorial 📹](https://youtu.be/DNKAvDeqH_Y)
+https://user-images.githubusercontent.com/66181793/150673670-7b12506f-67d6-4540-96f7-ea6233c01bd6.mp4
+
 ## Eyes Tracking with Mediapipe
 1. Mediapipe way more faster, has more landmarks, it can reach up to 30 fps as well. while dilb reach about 10fps.
 
@@ -19,6 +22,8 @@ Here you can find [Project Repository](https://github.com/Asadullah-Dal17/Eyes-P
 [**Eyes Tracking Tutorial**](https://youtu.be/obKG1SXp76Y)
 
 [**Control Things with Eyes Tutorial**](https://youtu.be/3YDlCRS1pes)
+
+
 
 ## TODO
 
