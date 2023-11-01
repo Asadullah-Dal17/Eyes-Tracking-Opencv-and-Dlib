@@ -10,11 +10,11 @@ https://user-images.githubusercontent.com/66181793/122632983-77c39680-d0ef-11eb-
 https://user-images.githubusercontent.com/66181793/150673670-7b12506f-67d6-4540-96f7-ea6233c01bd6.mp4
 
 ## Eyes Tracking with Mediapipe
-1. Mediapipe way more faster, has more landmarks, it can reach up to 30 fps as well. while dilb reach about 10fps.
+1. Mediapipe is way faster, has more landmarks, it can reach up to 30 fps as well. while dilb reaches about 10fps.
 
-2. Mediapipe is easy to install, just with pip command 
+2. Mediapipe is easy to install, just with the pip command 
 
-3. mediapipe does not require extra things, visual studio, cmake, etc on windows machine, 
+3. mediapipe does not require extra things, Visual Studio, CMake, etc on Windows machine, 
 
 Here you can find [Project Repository](https://github.com/Asadullah-Dal17/Eyes-Position-Estimator-Mediapipe)
 ## Youtube Tutorials 
@@ -45,7 +45,7 @@ Steps are involved to run the code.
 
    #### For Windows
 
-   - Inorder to install dilb on windows machines you need following: :smirk:
+   - In order to install Dilb on windows machines you need the following: :smirk:
 
      - Visual Studio
      - Visual Studio Build Tools
@@ -59,8 +59,8 @@ Steps are involved to run the code.
 
    #### Linux or Mac OS
 
-   - Just you need Cmake that all here on linux and Mac OS
-   - install Dilb uisng Pip command
+   - Just you need Cmake that all here on Linux and Mac OS
+   - install Dilb using Pip command
 
      `pip3 install cmake`
 
@@ -70,7 +70,7 @@ Steps are involved to run the code.
 
 2. Install opencv-python
    `pip install opencv-python`
-   for linux or Mac OS replace`pip` with `pip3` and you are good to go... :wink:
+   For Linux or Mac OS replace`pip` with `pip3` and you are good to go... :wink:
 
 3. Download landmarks [Predictor](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2)
    - Extract that file and put it into the **Predictor** folder or directory.
@@ -79,13 +79,13 @@ Steps are involved to run the code.
 
 ## Face Landmarks
 
-image show the face landmarks available in, dilb face landmark detector pre-trained network.
+image shows the face landmarks available in, the dilb face landmark detector pre-trained network.
 
 <img src="Images/faceLandmarks.jpg" alt="Landmark Image">
 
 ---
 
-if You found this Helpful, please star :star: it.
+If you found this Helpful, please star :star: it.
 
 You can Watch my Video Tutorial on Computer Vision Topics, just check out my YouTube Channel <a href="https://www.youtube.com/c/aiphile">  <img alt="AiPhile Youtube" src="https://user-images.githubusercontent.com/66181793/131223988-882d53a0-4882-468f-9bd7-46b46466baae.png"  width="20"> </a>
 
@@ -94,8 +94,39 @@ I am avalaible for paid work here <a href="https://www.fiverr.com/aiphile"> Five
 
 ## 💚🖤 Join me on Social Media 🖤💚 
 
-<h4><a href="https://www.youtube.com/c/aiphile"> YouTube  <img alt="AiPhile Youtube" src="https://user-images.githubusercontent.com/66181793/131223988-882d53a0-4882-468f-9bd7-46b46466baae.png"  width="35"> </a> 
- <a href="https://github.com/Asadullah-Dal17">  GitHub   <img alt="GitHub" src="https://user-images.githubusercontent.com/66181793/131223930-9fd2bfc7-9c43-465d-a057-55f3292f3b2b.png"  width="35"> </a> 
-  <a href="https://medium.com/@asadullah92c">  Medium   <img alt="Medium" src="https://user-images.githubusercontent.com/66181793/146642235-bde4be12-603d-4eed-bd44-5b28829e17b3.png"  width="35"> </a> 
- <a href="https://www.fiverr.com/aiphile">   Fiverr <img alt="Fiverr" src="https://user-images.githubusercontent.com/66181793/163767548-9a68e1c1-341a-4b07-9e35-042c35694c08.png"  width="35"> </a> 
-  <a href="https://www.instagram.com/aiphile17/">   Instagram <img alt="Instagram" src="https://user-images.githubusercontent.com/66181793/131223931-32d84c10-88b4-4cd6-8eb8-89f06c3b5b51.png"  width="35"> </a> 
+ 
+   <div id="badges">
+
+ <!-- Youtube Badge -->
+  <a href="https://www.youtube.com/c/aiphile">
+    <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
+  </a>
+
+<!-- Fiverr Badge -->
+   <a href="https://www.fiverr.com/asadullah_ar">
+    <img src="https://img.shields.io/badge/Fiverr-fiverr?style=for-the-badge&logo=Fiverr&logoColor=black" alt="Fiverr Badge"/>
+  </a> 
+<!-- Instagram Badge  -->
+  <a href="https://www.instagram.com/aiphile17">
+    <img src="https://img.shields.io/badge/Instagram-purple?style=for-the-badge&logo=Instagram&logoColor=white" alt="Medium Badge"/>
+
+<!-- Medium Badge  -->
+  <a href="https://medium.com/@aiphile">
+    <img src="https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=Medium&logoColor=white" alt="Medium Badge"/>
+  </a>
+
+<!-- LinkedIn Badge -->
+  <a href="https://www.linkedin.com/company/aiphile">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <!-- Face book badge  -->
+<a href="https://asadullah.super.site">
+    <img src="https://img.shields.io/badge/My%20Profile-black?style=for-the-badge&logo=Profile&logoColor=Green" alt="Facebook Badge"/>
+  </a> 
+  <!-- Twitter Badge  -->
+  <a href="https://twitter.com/ai_phile">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+  
+ 
+</div>
